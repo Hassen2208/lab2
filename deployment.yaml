@@ -1,21 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: lab2-deployment   
+  name: lab2-deployment
 spec:
-  replicas: 3  
+  replicas: 3
   selector:
     matchLabels:
-      app: lab2  
+      app: lab2
   template:
     metadata:
       labels:
-        app: lab2  
+        app: lab2
     spec:
       containers:
-      - name: lab2-container  
-        image: ghcr.io/hassen2208/lab2/mlapp1:latest  
+      - name: lab2-container
+        image: ghcr.io/hassen2208/lab2/mlapp1:latest
         ports:
         - containerPort: 8000
       imagePullSecrets:
-      - name: ghcr-secret  
+      - name: ghcr-secret
+
